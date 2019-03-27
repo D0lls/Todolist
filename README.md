@@ -1,2 +1,59 @@
-###TODOLIST BY VICTOR ANDRUSIAK
+#TODOLIST BY VICTOR ANDRUSIAK
 
+
+Possibilité d'afficher, supprimer, modifier
+
+
+
+
+BDD : 
+
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données :  `todo-list`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `todo`
+--
+
+DROP TABLE IF EXISTS `todo`;
+CREATE TABLE IF NOT EXISTS `todo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime NOT NULL,
+  `todo` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `todo`
+--
+
+INSERT INTO `todo` (`id`, `date`, `todo`) VALUES
+(25, '2019-06-25 00:00:00', '%66%65%65%66%66%65%66%65%66%65%66%65'),
+(22, '2020-08-25 00:00:00', '%4a%65%20%73%75%69%73%20%6c%61%20%74%65%73%74%65%65%65%65%65%65%65%65%65'),
+(17, '2019-06-25 00:00:00', '%66%72%72%6a%68%74%65%74%72%67%72%65%74%65%64'),
+(26, '2019-06-25 00:00:00', '%67%72%65%67%67%72%72%67'),
+(24, '2019-06-25 00:00:00', '%65%66%65%66%65%66%65'),
+(20, '2019-06-25 00:00:00', '%65%67%65'),
+(27, '2019-06-25 00:00:00', '%6e%79%79'),
+(28, '2019-06-25 00:00:00', '%68%72%64%72%68%68%72%65');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
